@@ -1,0 +1,19 @@
+html,
+body {
+  background: coral;
+  height: 100%;
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  min-height: 80%;
+  justify-content: center;
+}
+
+.App {
+  font-family: sans-serif;
+  max-width: 720px;
+  flex-grow: 1;
+}
