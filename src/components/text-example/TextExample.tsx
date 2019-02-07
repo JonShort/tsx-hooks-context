@@ -28,12 +28,13 @@ export const TextExample: React.FC = () => {
 
   return (
     <React.Fragment>
+      <h1>Text example</h1>
       <BigLabel>
         Calculate width of text:
         <BigInput type="text" onChange={handleChange} />
       </BigLabel>
-      <h2>Width of your text</h2>
       <ScaleBox width={width} />
+      <h2>Width of your text - {Math.floor(width)}px</h2>
     </React.Fragment>
   );
 };

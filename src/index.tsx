@@ -10,6 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <ClickExample />
+      <hr style={{ margin: "40px 0" }} />
       <TextExample />
     </div>
   );

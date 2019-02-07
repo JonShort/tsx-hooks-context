@@ -27,7 +27,7 @@ const StatefulButtons: React.FC<IStatefulButtons> = ({
   };
 
   return (
-    <React.Fragment>
+    <div style={{ textAlign: "center" }}>
       <InteractiveBigButton
         clicks={Aclicks}
         onClick={() => setAclicks(Aclicks + increment)}
@@ -41,7 +41,7 @@ const StatefulButtons: React.FC<IStatefulButtons> = ({
         {Bclicks}
       </InteractiveBigButton>
       <BigButton onClick={resetCounters}>Reset</BigButton>
-    </React.Fragment>
+    </div>
   );
 };
 

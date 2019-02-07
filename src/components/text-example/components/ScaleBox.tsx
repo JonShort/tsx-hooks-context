@@ -10,6 +10,6 @@ export const ScaleBox = styled.div.attrs((p: Props) => ({
     width: `${p.width}px`
   }
 }))`
-  background: white;
-  height: 15px;
+  background: black;
+  height: 5px;
 `;

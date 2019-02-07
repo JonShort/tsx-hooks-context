@@ -3,11 +3,11 @@ import * as React from "react";
 import { ClickContext } from "../utils";
 
 export const DisplayClicks: React.FC = props => {
-  const context = React.useContext(ClickContext);
+  const totalClicks = React.useContext(ClickContext);
 
   return (
-    <section>
-      <h1>{context}</h1>
+    <section style={{ textAlign: "center" }}>
+      <h2>Total clicks - {totalClicks}</h2>
     </section>
   );
 };

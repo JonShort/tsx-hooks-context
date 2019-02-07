@@ -8,6 +8,6 @@ interface Props {
 
 export const InteractiveBigButton = styled(BigButton).attrs((p: Props) => ({
   style: {
-    background: `rgba(230, 50, 126, ${p.clicks / 10})`
+    background: `rgba(230, 50, 126, ${p.clicks / 100})`
   }
 }))``;
