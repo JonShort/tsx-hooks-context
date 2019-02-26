@@ -4,7 +4,7 @@ import { render } from "react-dom";
 import "./styles.css";
 
 // Components
-import { ClickExample, TextExample } from "./components";
+import { ClickExample, TextExample, WindowSize } from "./components";
 
 const App: React.FC = () => {
   return (
@@ -12,6 +12,8 @@ const App: React.FC = () => {
       <ClickExample />
       <hr style={{ margin: "40px 0" }} />
       <TextExample />
+      <hr style={{ margin: "40px 0" }} />
+      <WindowSize />
     </div>
   );
 };
