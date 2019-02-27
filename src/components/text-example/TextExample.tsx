@@ -1,24 +1,11 @@
 import * as React from "react";
 
 import { BigLabel, BigInput, ScaleBox } from "./components";
-import { Canvas } from "./utils";
-
-const cvs = new Canvas("25px sans-serif");
+import { Canvas, useTextWidth } from "./utils";
 
 export const TextExample: React.FC = () => {
   const [userText, setUserText] = React.useState("");
-  const [width, setWidth] = React.useState(0);
-
-  const measureText = text => cvs.textWidth(userText);
-
-  React.useEffect(
-    () => {
-      const textWidth = measureText(userText);
-
-      return setWidth(textWidth);
-    },
-    [userText]
-  );
+  const textWidth = useTextWidth(userText);
 
   const handleChange = ev => {
     const text = ev.target.value;
@@ -33,8 +20,8 @@ export const TextExample: React.FC = () => {
         Calculate width of text:
         <BigInput type="text" onChange={handleChange} />
       </BigLabel>
-      <ScaleBox width={width} />
-      <h2>Width of your text - {Math.floor(width)}px</h2>
+      <ScaleBox width={textWidth} />
+      <h2>Width of your text - {Math.floor(textWidth)}px</h2>
     </React.Fragment>
   );
 };
