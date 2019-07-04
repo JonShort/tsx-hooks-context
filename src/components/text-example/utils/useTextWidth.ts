@@ -10,16 +10,13 @@ export const useTextWidth = text => {
     canvas.current = new Canvas("25px sans-serif");
 
     return () => {
-      canvas.current._destroyCanvas;
+      canvas.current._destroyCanvas();
     };
   }, []);
 
-  React.useEffect(
-    () => {
-      setTextWidth(canvas.current.textWidth(text));
-    },
-    [text]
-  );
+  React.useEffect(() => {
+    setTextWidth(canvas.current.textWidth(text));
+  }, [text]);
 
   return textWidth;
 };
